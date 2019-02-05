@@ -4,7 +4,6 @@
   "description": "Check your upload and download speed using google cloud bucket.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "unit": "node index.js",
     "prepublish": "node index.js",
     "release": "np patch"
