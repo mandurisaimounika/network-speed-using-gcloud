@@ -2,7 +2,7 @@
 
 Calculates your internet upload and download speed using your google cloud storage.
 
-## What's are important requirements for this ?
+## What are important requirements for this ?
 - You should have a google cloud storage with atleast one bucket
 - You should give google authentication credentials from your cmd / terminal to access your bucket
 
