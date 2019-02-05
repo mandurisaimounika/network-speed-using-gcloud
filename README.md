@@ -16,7 +16,7 @@ Calculates your internet upload and download speed using your google cloud stora
 
 ## Installation
 ```bash
-$ npm install upload-download-speed-using-gcloud
+$ npm install network-speed-using-gcloud
 ```
 
 ## Getting Started
@@ -24,7 +24,7 @@ $ npm install upload-download-speed-using-gcloud
 let speedTest = require('network-speed-using-gcloud');
 
 let uploadOptions = {
-    fileName: 'IMAGE_PATH_TO_UPLOAD'
+    fileName: 'IMAGE_PATH_TO_UPLOAD',
     delete: false 
 };
 
