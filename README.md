@@ -14,11 +14,11 @@ Calculates your internet upload and download speed using your google cloud stora
 - Download the .json file in your system
 - Later in terminal where you are executing this function git "exportGOOGLE_APPLICATION_CREDENTIALS='YOUR_DOWNLOADED_JSON_PATH'"
 
-# Installation
+## Installation
 
 $ npm install upload-download-speed-using-gcloud
 
-# Getting Started
+## Getting Started
 
 let speedTest = require('upload-download-speed-using-gcloud');
 
