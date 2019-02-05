@@ -1,0 +1,33 @@
+{
+  "name": "upload-download-using-gcloud",
+  "version": "1.0.0",
+  "description": "Check your upload and download speed using google cloud bucket.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "unit": "node example.js"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^2.4.1",
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {
+    "http": "0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandurisaimounika/upload-download-speed-using-gcloud.git"
+  },
+  "keywords": [
+    "upload",
+    "download",
+    "gcloud",
+    "google-cloud"
+  ],
+  "author": "Sai Mounika Manduri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandurisaimounika/upload-download-speed-using-gcloud/issues"
+  },
+  "homepage": "https://github.com/mandurisaimounika/upload-download-speed-using-gcloud#readme"
+}

@@ -1,12 +1,12 @@
-Upload-download-speed-using-gcloud
+# Upload-download-speed-using-gcloud
 
 Calculates your internet upload and download speed using your google cloud storage.
 
-What's are important requirements for this ?
+# What's are important requirements for this ?
 - You should have a google cloud storage with atleast one bucket
 - You should give google authentication credentials from your cmd / terminal to access your bucket
 
-How to give google authentication credentials ?
+# How to give google authentication credentials ?
 - You should go to the "API & Services" in your google cloud platform menu
 - Then select credentials -> Create credential -> Service Account Key
 - Then select New Service Account -> service account name
@@ -14,11 +14,11 @@ How to give google authentication credentials ?
 - Download the .json file in your system
 - Later in terminal where you are executing this function git "exportGOOGLE_APPLICATION_CREDENTIALS='YOUR_DOWNLOADED_JSON_PATH'"
 
-Installation
+# Installation
 
 $ npm install upload-download-speed-using-gcloud
 
-Getting Started
+# Getting Started
 
 let speedTest = require('upload-download-speed-using-gcloud');
 
@@ -40,7 +40,7 @@ speedTest.checkDownloadSpeed('YOUR_BUCKET_NAME', options, function (data) {
     console.log('downloadData :', data);
 });
 
-Methods 
+# Methods 
 
 checkUploadSpeed(bucketName, options, cb)
 - buketName (required)
