@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "unit": "node index.js",
-    "prepublish": "node index.js"
+    "prepublish": "node index.js",
+    "release": "np patch"
   },
   "dependencies": {
     "@google-cloud/storage": "^2.4.1",
