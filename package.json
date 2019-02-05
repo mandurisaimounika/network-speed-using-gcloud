@@ -1,6 +1,6 @@
 {
   "name": "network-speed-using-gcloud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check your upload and download speed using google cloud bucket.",
   "main": "index.js",
   "scripts": {
