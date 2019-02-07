@@ -12,7 +12,8 @@ Calculates your internet upload and download speed using your google cloud stora
 - Then select New Service Account -> service account name
 - Select JSON format and Create
 - Download the .json file in your system
-- Later in terminal where you are executing this function git "exportGOOGLE_APPLICATION_CREDENTIALS='YOUR_DOWNLOADED_JSON_PATH'"
+- Later in terminal where you are executing this function git 
+"export GOOGLE_APPLICATION_CREDENTIALS='YOUR_DOWNLOADED_JSON_PATH'"
 
 ## Installation
 ```bash
@@ -25,7 +26,8 @@ let speedTest = require('network-speed-using-gcloud');
 
 let uploadOptions = {
     fileName: 'IMAGE_PATH_TO_UPLOAD', //image should be in MB.
-    delete: false 
+    delete: false ,
+    destinationFileName: '/FOLDER_NAME_IN_BUCKET/IMAGE_NAME_IN_BUCKET_TO_UPLOAD' //if you want to upload to some specific folder inside the bucket
 };
 
 speedTest.checkUploadSpeed('YOUR_BUCKET_NAME', uploadOptions, function (data) {
@@ -33,7 +35,7 @@ speedTest.checkUploadSpeed('YOUR_BUCKET_NAME', uploadOptions, function (data) {
 });
 
 let options = {
-    fileName: 'IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD', //image should be in MB.
+    fileName: 'IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD' or '/FOLDER_NAME_IN_BUCKET/IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD, //image should be in MB.
     destinationFilePath: 'DESTINATION_PATH_TO_DOWNLOAD'
 };
 
@@ -45,11 +47,12 @@ speedTest.checkDownloadSpeed('YOUR_BUCKET_NAME', options, function (data) {
 ## Methods 
 
 ### checkUploadSpeed(bucketName, options, cb)
-- buketName (required)
+- bucketName (required)
 - options: {
     fileName: (required),
-    imageName: (optional) // the name of image uploaded in bucket
-    delete: (optional) (default: false) // if you want to delete the image from the bucket you uploaded
+    imageName: (optional), // the name of image uploaded in bucket
+    delete: (optional) (default: false), // if you want to delete the image from the bucket you uploaded
+    destinationFileName: (optional) // if you want to upload in a specific folder of the bucket
     }
 - cb (required)
 
