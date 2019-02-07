@@ -1,7 +1,8 @@
 let speedTest = require('./index.js');
 
 let uploadOptions = {
-    fileName: './mounika.jpg'
+    fileName: './Image.jpg',
+    destinationFileName: '/folderName/ImageName.jpg'
 };
 
 speedTest.checkUploadSpeed('node-upload-download', uploadOptions, function (data) {
@@ -9,8 +10,8 @@ speedTest.checkUploadSpeed('node-upload-download', uploadOptions, function (data
 });
 
 let options = {
-    fileName: 'mounika.jpg',
-    destinationFilePath: './test/mounika.jpg'
+    fileName: '/folderName/ImageName.jpg',
+    destinationFilePath: './ImageName.jpg'
 };
 
 speedTest.checkDownloadSpeed('node-upload-download', options, function (data) {

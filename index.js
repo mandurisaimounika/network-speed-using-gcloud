@@ -5,12 +5,19 @@ var fs = require('fs-extra');
 var storage = new Storage();
 async function checkUploadSpeed(bucketName, options = {delete: false}, cb) {
     let startTime = new Date().getTime();
-    await storage.bucket(bucketName).upload(options.fileName, {
+    let bucketUploadOptions =  options.destinationFileName ? {
+        destination: options.destinationFileName,
         gzip: false,
         metadata: {
             cacheControl: 'public, max-age=31536000'
         }
-    }).then(async () => {
+    } : {
+        gzip: false,
+        metadata: {
+            cacheControl: 'public, max-age=31536000'
+        }
+    }
+    await storage.bucket(bucketName).upload(options.fileName, bucketUploadOptions).then(async () => {
         let endTime = new Date().getTime();
         let duration = (endTime - startTime) / 1000;
         let bitsLoaded = 5000000 * 8;
