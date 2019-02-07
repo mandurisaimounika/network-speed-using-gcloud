@@ -30,7 +30,7 @@ async function checkUploadSpeed(bucketName, options = {delete: false}, cb) {
             mbps: uploadSpeedMbps
         };
         if (options && options.delete) {
-          await storage.bucket('node-upload-download').file(options.imageName).delete();
+          await storage.bucket(bucketName).file(options.imageName).delete();
         }
         cb(uploadSpeedData);
     });
