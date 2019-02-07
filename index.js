@@ -39,11 +39,14 @@ async function checkUploadSpeed(bucketName, options = {delete: false}, cb) {
 
 async function checkDownloadSpeed(bucketName, options, cb) {
     let startTime = new Date().getTime();
+    let endTime = new Date().getTime();
     let bucket = storage.bucket(bucketName);
     let remoteFile = bucket.file(options.fileName);
     await remoteFile.createReadStream()
-        .once('response', async (response) => {
-            let endTime = new Date().getTime();
+        .once('response', () => {
+            endTime = new Date().getTime();
+        })
+        .on('response', async (response) => {
             let byteLengthReceived = response.headers["content-length"];
             let extrabyteLengthReceived = Number(byteLengthReceived.slice(1, byteLengthReceived.length));
             byteLengthReceived = Number(byteLengthReceived);
