@@ -35,7 +35,7 @@ speedTest.checkUploadSpeed('YOUR_BUCKET_NAME', uploadOptions, function (data) {
 });
 
 let options = {
-    fileName: 'IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD' or '/FOLDER_NAME_IN_BUCKET/IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD, //image should be in MB.
+    fileName: 'IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD' or '/FOLDER_NAME_IN_BUCKET/IMAGE_NAME_IN_BUCKET_TO_DOWNLOAD', //image should be in MB.
     destinationFilePath: 'DESTINATION_PATH_TO_DOWNLOAD'
 };
 
